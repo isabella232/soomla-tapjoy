@@ -9,7 +9,7 @@ Getting Started
 ---
 
 1. Copy the file SoomlaTapjoy.java to your project and place it in: src/com/soomla/tapjoy.
-2. Include the jar 'tapjoyconnectlibrary.jar' in your project's classpath.
+2. Include the jar 'tapjoyconnectlibrary.jar' in your project's classpath. In the file, insert you Tapjoy app id and secret.
 3. Go to the Tapjoy console and set the currecy name to be the same as the itemId of your game's currency.
 4. In order to update the currency balance after TapPoints were given to the user, override 'onResume()' and in that function call:
 
