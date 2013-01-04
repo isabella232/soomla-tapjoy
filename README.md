@@ -3,7 +3,7 @@ soomla-tapjoy
 
 This project is a plugin for The SOOMLA Project's stores. It currently supports (android-store)[http://github.com/soomla/android-store].
 
-There's an IntelliJ example added this this project. You can see the the way we call Tapjoy in (StoreGoodsActivity.java)[https://github.com/refaelos/soomla-tapjoy/blob/master/example/soomla-tapjoy/src/com/soomla/tapjoy/example/StoreGoodsActivity.java].
+There's an IntelliJ example added this this project. You can see the the way we call Tapjoy in (StoreGoodsActivity.java)[https://github.com/soomla/soomla-tapjoy/blob/master/example/soomla-tapjoy/src/com/soomla/tapjoy/example/StoreGoodsActivity.java].
 
 Getting Started
 ---
