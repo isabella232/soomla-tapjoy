@@ -44,7 +44,16 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/TapjoyPublisherSDK_Android_v9.0.0/TapjoyConnect/tapjoyconnectlibrary.jar!/" />
+          <root url="jar://$MODULE_DIR$/libs/square-otto-1.3.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/tapjoyconnectlibrary.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

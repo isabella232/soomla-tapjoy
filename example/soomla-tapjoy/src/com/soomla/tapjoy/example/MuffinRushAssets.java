@@ -11,6 +11,11 @@ import java.util.HashMap;
 public class MuffinRushAssets implements IStoreAssets {
 
     @Override
+    public int getVersion() {
+        return 0;
+    }
+
+    @Override
     public VirtualCurrency[] getVirtualCurrencies(){
         return  new VirtualCurrency[] {
                 MUFFIN_CURRENCY
@@ -40,9 +45,9 @@ public class MuffinRushAssets implements IStoreAssets {
     }
 
     @Override
-    public GoogleMarketItem[] getGoogleManagedItems() {
-        return new GoogleMarketItem[] {
-                NO_ADDS_MANAGED
+    public NonConsumableItem[] getNonConsumableItems() {
+        return new NonConsumableItem[]{
+                NO_ADDS_NONCONS
         };
     }
 
@@ -54,12 +59,12 @@ public class MuffinRushAssets implements IStoreAssets {
     public static final String FIFTYMUFF_PACK_PRODUCT_ID    = "android.test.canceled";
     public static final String FORTYMUFF_PACK_PRODUCT_ID    = "android.test.purchased";
     public static final String THOUSANDMUFF_PACK_PRODUCT_ID = "android.test.item_unavailable";
-    public static final String NO_ADDS_MANAGED_PRODUCT_ID   = "no_ads";
+    public static final String NO_ADDS_NONCONS_PRODUCT_ID   = "no_ads";
 
     /** Virtual Categories **/
     // The muffin rush theme doesn't support categories, so we just put everything under a general category.
     public static final VirtualCategory GENERAL_CATEGORY = new VirtualCategory(
-            "General", 0
+            "General", 0, VirtualCategory.EquippingModel.NONE
     );
 
     /** Virtual Currencies **/
@@ -81,7 +86,7 @@ public class MuffinRushAssets implements IStoreAssets {
             new StaticPriceModel(MUFFINCAKE_PRICE),         // currency value
             "fruit_cake"                                    // item id
             ,
-            GENERAL_CATEGORY, false);
+            GENERAL_CATEGORY);
 
     private static final HashMap<String, Integer> PAVLOVA_PRICE =
             new HashMap<String, Integer>();
@@ -94,7 +99,7 @@ public class MuffinRushAssets implements IStoreAssets {
             new StaticPriceModel(PAVLOVA_PRICE),            // currency value
             "pavlova"                                       // item id
             ,
-            GENERAL_CATEGORY, false);
+            GENERAL_CATEGORY);
 
     private static final HashMap<String, Integer> CHOCLATECAKE_PRICE =
             new HashMap<String, Integer>();
@@ -107,7 +112,7 @@ public class MuffinRushAssets implements IStoreAssets {
             new StaticPriceModel(CHOCLATECAKE_PRICE),       // currency value
             "chocolate_cake"                                // item id
             ,
-            GENERAL_CATEGORY, false);
+            GENERAL_CATEGORY);
 
     private static final HashMap<String, Integer> CREAMCUP_PRICE =
             new HashMap<String, Integer>();
@@ -120,7 +125,7 @@ public class MuffinRushAssets implements IStoreAssets {
             new StaticPriceModel(CREAMCUP_PRICE),           // currency value
             "cream_cup"                                     // item id
             ,
-            GENERAL_CATEGORY, false);
+            GENERAL_CATEGORY);
 
     /** Virtual Currency Packs **/
 
@@ -161,10 +166,15 @@ public class MuffinRushAssets implements IStoreAssets {
             MUFFIN_CURRENCY);
 
 
-    /** Google MANAGED Items **/
+    /** Google Non Consumable (MANAGED) Items **/
 
-    public static final GoogleMarketItem NO_ADDS_MANAGED  = new GoogleMarketItem(
-            NO_ADDS_MANAGED_PRODUCT_ID, GoogleMarketItem.Managed.MANAGED
+    public static final NonConsumableItem NO_ADDS_NONCONS  = new NonConsumableItem(
+            "No Ads",
+            "Test purchase of MANAGED item.",
+            "no_ads",
+            NO_ADDS_NONCONS_PRODUCT_ID,
+            1.99
     );
 
 }
+
